@@ -1,16 +1,20 @@
 <template>
-  <div>{{ hello }}</div>
+  <commonHeader></commonHeader>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
+import { ref } from 'vue'
+import commonHeader from '@/components/header/index.vue'
 
-export default defineComponent({
+export default {
+  components: {
+    commonHeader
+  },
   setup() {
-    const hello = ref('this is home')
-    return { hello }
+    const title = ref('saas-platform')
+    return { title }
   }
-})
+}
 </script>
 
 <style lang="scss"></style>

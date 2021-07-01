@@ -5,12 +5,12 @@
       <el-form
         :model="loginForm"
         :rules="rules"
-        label-width="70px"
+        label-width="90px"
         class="demo-ruleForm"
         ref="loginFormRef"
       >
-        <el-form-item label="Username" prop="userName">
-          <el-input class="input" v-model="loginForm.userName" placeholder="Username"></el-input>
+        <el-form-item label="Username" prop="username">
+          <el-input class="input" v-model="loginForm.username" placeholder="Username"></el-input>
         </el-form-item>
         <el-form-item label="Password" prop="password">
           <el-input
@@ -36,12 +36,12 @@ export default defineComponent({
   setup() {
     const router = useRouter()
     const loginForm = reactive({
-      userName: 'admin',
+      username: 'admin',
       password: '66666'
     })
     const rules = ref({
-      userName: [{ require: true, message: 'amdin', trigger: 'blur' }],
-      password: [{ require: true, message: '666666', trigger: 'blur' }]
+      username: [{ required: true, message: 'amdin', trigger: 'blur' }],
+      password: [{ required: true, message: '666666', trigger: 'blur' }]
     })
 
     const loginFormRef = ref()
@@ -70,7 +70,7 @@ export default defineComponent({
   background-size: 100% 100%;
 }
 .content {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: $basePadding;
   border-radius: 5px;
   box-shadow: inset 0px 0px 5px 2px $divider;
@@ -78,7 +78,7 @@ export default defineComponent({
   flex-direction: column;
 }
 .input {
-  width: 400px;
+  width: 360px;
 }
 .login-image {
   width: 200px;
