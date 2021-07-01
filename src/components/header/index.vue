@@ -7,7 +7,7 @@
     <div class="right">
       <el-avatar :size="size" :src="circleUrl"></el-avatar>
       <div class="userName">Admin</div>
-      <i class="el-icon-arrow-down el-icon--right"></i>
+      <i class="el-icon-arrow-down"></i>
     </div>
   </div>
 </template>
